@@ -39,6 +39,10 @@ int main(){
     cout<<"Cola de Peticiones"<<endl;
     for(int k=1; k<4; k++)
         cout<<inv.regresaPet(k)<<endl;
-
+    cout<<"Agregar ventas"<<endl;
+    inv.registrarVenta(1, 3, 10);
+    inv.registrarVenta(1, 2, 10);
+    inv.registrarVenta(1, 1, 10);
+    cout<<inv.totalVentasAnuales()<<endl;
     return 0;
 }

@@ -103,16 +103,19 @@ public:
             nuevo->setCategoria(categoria);
             nuevo->setExistencias(existencias);
             productos.push_final(*nuevo);
-            for(int k = 0; k<12; k++){
             auto* fila = new lista_doble<int>();
-            ventasMensuales.push_final(fila);
+            auto* fila1 = new lista_doble<bool>();
+            for(int k = 0; k<12; k++){
+                fila->push_final(0);
             }
 
             for(int k = 0; k<storeCont; k++){
-            auto* fila = new lista_doble<bool>();
-            disponibilidad.push_final(fila);
-            }
+                fila1->push_final(0);
 
+
+            }
+            ventasMensuales.push_final(fila);
+            disponibilidad.push_final(fila1);
             producCont++;
 
     }
